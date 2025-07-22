@@ -1,7 +1,13 @@
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "./LanguageSwitcher";
 import heroImage from "@/assets/hero-image.jpg";
 
 const Hero = () => {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === 'ar';
+  const isMalayalam = i18n.language === 'ml';
+  
   const scrollToProducts = () => {
     document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -12,6 +18,11 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Language Switcher */}
+      <div className="absolute top-4 right-4 z-20">
+        <LanguageSwitcher />
+      </div>
+
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img 
@@ -25,16 +36,23 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className={`relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center ${isRTL ? 'rtl' : ''}`}>
         <div className="animate-fade-in-up">
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6">
-            AR Traders
-            <span className="block text-accent font-display">Premium Dry Fruits & Nuts</span>
+          <h1 className={`text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 ${
+            isRTL ? 'font-arabic' : isMalayalam ? 'font-malayalam' : 'font-calligraphy'
+          }`}>
+            {t('hero.title')}
+            <span className={`block text-accent ${
+              isRTL ? 'font-arabic' : isMalayalam ? 'font-malayalam' : 'font-calligraphy'
+            }`}>
+              {t('hero.subtitle')}
+            </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            With over 25 years of experience, we import the finest varieties of dates, Turkish figs, 
-            premium chocolates, and nuts from around the world. Quality and freshness guaranteed.
+          <p className={`text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed ${
+            isRTL ? 'font-arabic text-right' : isMalayalam ? 'font-malayalam' : ''
+          }`}>
+            {t('hero.description')}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -42,17 +60,21 @@ const Hero = () => {
               variant="hero" 
               size="lg"
               onClick={scrollToProducts}
-              className="px-8 py-4 text-lg rounded-xl"
+              className={`px-8 py-4 text-lg rounded-xl ${
+                isRTL ? 'font-arabic' : isMalayalam ? 'font-malayalam' : ''
+              }`}
             >
-              Explore Products
+              {t('hero.exploreProducts')}
             </Button>
             <Button 
               variant="outline" 
               size="lg"
               onClick={scrollToContact}
-              className="px-8 py-4 text-lg rounded-xl bg-white/10 border-white text-white hover:bg-white hover:text-primary"
+              className={`px-8 py-4 text-lg rounded-xl bg-white/10 border-white text-white hover:bg-white hover:text-primary ${
+                isRTL ? 'font-arabic' : isMalayalam ? 'font-malayalam' : ''
+              }`}
             >
-              Contact Us
+              {t('hero.contactUs')}
             </Button>
           </div>
         </div>

@@ -19,8 +19,11 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'display': ['Playfair Display', 'serif'],
-				'inter': ['Inter', 'sans-serif'],
+				display: ['Aref Ruqaa', 'Amiri', 'serif'],
+				arabic: ['Amiri', 'Noto Sans Arabic', 'serif'],
+				malayalam: ['Noto Sans Malayalam', 'sans-serif'],
+				calligraphy: ['Scheherazade New', 'Aref Ruqaa', 'serif'],
+				sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

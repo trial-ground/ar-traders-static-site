@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "AR Traders",
+    "subtitle": "Premium Dry Fruits & Nuts",
+    "description": "With over 25 years of experience, we import the finest varieties of dates, Turkish figs, premium chocolates, and nuts from around the world. Quality and freshness guaranteed.",
+    "exploreProducts": "Explore Products",
+    "contactUs": "Contact Us"
+  },
+  "products": {
+    "title": "Our Product Categories",
+    "description": "Each category features carefully selected, premium quality products sourced from the finest growers worldwide.",
+    "nuts": {
+      "title": "Premium Nuts",
+      "description": "Premium almonds, cashews, pistachios, and roasted peanuts",
+      "features": ["Premium Almonds", "Fresh Cashews", "Pistachios (Pista)", "Roasted Peanuts"]
+    },
+    "dryFruits": {
+      "title": "Dry Fruits",
+      "description": "Turkish figs and premium naturally dried fruits",
+      "features": ["Turkish Figs", "Premium Apricots", "Golden Raisins", "Dried Prunes"]
+    },
+    "chocolates": {
+      "title": "Imported Chocolates",
+      "description": "Premium imported chocolates from Europe and worldwide",
+      "features": ["European Dark Chocolate", "Swiss Milk Chocolate", "Gourmet Truffles", "Artisanal Bars"]
+    },
+    "dates": {
+      "title": "Premium Dates",
+      "description": "Medjool, Ajwa, and specialty dates from Jordan, Saudi, Iran & Algeria",
+      "features": ["Medjool Jordan & Saudi", "Ajwa Premium", "Safawi & Amber", "Sukri & Iranian"]
+    },
+    "viewProducts": "View Products"
+  },
+  "about": {
+    "title": "Why Choose Our Premium Selection?",
+    "description": "With over 25 years of experience in the dry fruits and nuts industry, AR Traders has built lasting relationships with growers worldwide who share our commitment to quality and sustainability. Every product is carefully selected, tested, and packed to deliver the finest experience to our customers.",
+    "features": {
+      "quality": {
+        "title": "Quality First",
+        "description": "We source only the finest quality dry fruits and nuts from trusted growers worldwide."
+      },
+      "fresh": {
+        "title": "Natural & Fresh",
+        "description": "All our products are natural, preservative-free, and packed fresh to maintain optimal taste."
+      },
+      "premium": {
+        "title": "Premium Selection",
+        "description": "Carefully curated selection of premium varieties to ensure exceptional quality in every bite."
+      },
+      "delivery": {
+        "title": "Fast Delivery",
+        "description": "Quick and reliable delivery to ensure you receive your order fresh and on time."
+      }
+    },
+    "stats": {
+      "experience": "Years Experience",
+      "customers": "Happy Customers",
+      "varieties": "Product Varieties",
+      "guarantee": "Quality Guarantee"
+    }
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "description": "Have questions about our products or need custom orders? We'd love to hear from you!",
+    "info": {
+      "visit": "Visit Our Store",
+      "call": "Call Us",
+      "email": "Email Us",
+      "hours": "Business Hours"
+    },
+    "form": {
+      "title": "Send us a Message",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your requirements...",
+      "send": "Send Message"
+    }
+  },
+  "footer": {
+    "description": "With 25+ years of experience, your trusted source for premium dates, Turkish figs, imported chocolates, and finest nuts. Quality and freshness guaranteed with every order.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "madeWith": "Made with",
+    "forQuality": "for quality food lovers",
+    "copyright": "AR Traders. All rights reserved. | Quality guaranteed since 1999."
+  }
+}
