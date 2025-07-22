@@ -1,42 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Premium dry fruits business design system */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core brand colors - warm, premium earth tones */
+    --background: 43 36% 97%;
+    --foreground: 25 20% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 43 36% 97%;
+    --card-foreground: 25 20% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 43 36% 97%;
+    --popover-foreground: 25 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Rich chocolate brown primary */
+    --primary: 25 45% 20%;
+    --primary-foreground: 43 36% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm cream secondary */
+    --secondary: 43 25% 92%;
+    --secondary-foreground: 25 35% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Soft muted tones */
+    --muted: 43 20% 90%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Golden amber accent */
+    --accent: 40 95% 65%;
+    --accent-foreground: 25 45% 20%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Natural green for organic feel */
+    --natural: 140 30% 35%;
+    --natural-foreground: 43 36% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 43 36% 97%;
 
-    --radius: 0.5rem;
+    --border: 43 15% 85%;
+    --input: 43 15% 85%;
+    --ring: 25 45% 20%;
+
+    /* Premium gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(25 45% 20%), hsl(25 35% 30%));
+    --gradient-warm: linear-gradient(135deg, hsl(40 95% 65%), hsl(35 85% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(25 45% 20%) 0%, hsl(25 35% 30%) 50%, hsl(40 95% 65%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(43 36% 97%), hsl(43 25% 92%));
+
+    /* Elegant shadows */
+    --shadow-warm: 0 10px 30px -5px hsl(25 45% 20% / 0.1);
+    --shadow-premium: 0 20px 50px -10px hsl(25 45% 20% / 0.15);
+    --shadow-glow: 0 0 30px hsl(40 95% 65% / 0.3);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +120,70 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+
+  /* Typography styles */
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  /* Hero button variants */
+  .btn-hero {
+    @apply bg-gradient-to-r from-primary to-primary/90 text-primary-foreground;
+    @apply hover:shadow-lg hover:scale-105 transition-all duration-300;
+    @apply px-8 py-4 rounded-xl font-medium;
+  }
+
+  .btn-accent {
+    @apply bg-accent text-accent-foreground;
+    @apply hover:bg-accent/90 hover:shadow-warm transition-all duration-300;
+    @apply px-6 py-3 rounded-lg font-medium;
+  }
+
+  /* Card styles */
+  .card-premium {
+    @apply bg-gradient-to-br from-card to-secondary;
+    @apply border border-border/50 rounded-xl;
+    @apply shadow-warm hover:shadow-premium transition-all duration-300;
+  }
+
+  /* Animations */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-premium;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
