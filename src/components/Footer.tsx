@@ -8,11 +8,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
             <h3 className="font-display text-2xl font-bold mb-4">
-              Premium Dry Fruits
+              AR Traders
             </h3>
             <p className="text-primary-foreground/80 mb-4 max-w-md">
-              Your trusted source for premium dry fruits, nuts, chocolates, and dates. 
-              Quality and freshness guaranteed with every order.
+              With 25+ years of experience, your trusted source for premium dates, Turkish figs, 
+              imported chocolates, and finest nuts. Quality and freshness guaranteed with every order.
             </p>
             <div className="flex items-center text-sm text-primary-foreground/60">
               Made with <Heart className="w-4 h-4 mx-1 text-accent" /> for quality food lovers
@@ -37,7 +37,7 @@ const Footer = () => {
               <li>123 Premium Foods Street</li>
               <li>Gourmet District, City 12345</li>
               <li>Phone: +1 (555) 123-4567</li>
-              <li>Email: info@premiumdryfruits.com</li>
+              <li>Email: info@artraders.com</li>
             </ul>
           </div>
         </div>
@@ -45,7 +45,7 @@ const Footer = () => {
         {/* Bottom Border */}
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60 text-sm">
-            © 2024 Premium Dry Fruits. All rights reserved. | Quality guaranteed since 2014.
+            © 2024 AR Traders. All rights reserved. | Quality guaranteed since 1999.
           </p>
         </div>
       </div>

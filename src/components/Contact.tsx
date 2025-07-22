@@ -19,7 +19,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@premiumdryfruits.com", "orders@premiumdryfruits.com"]
+      details: ["info@artraders.com", "orders@artraders.com"]
     },
     {
       icon: Clock,

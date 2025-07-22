@@ -28,13 +28,13 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in-up">
           <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6">
-            Premium
-            <span className="block text-accent font-display">Dry Fruits & Nuts</span>
+            AR Traders
+            <span className="block text-accent font-display">Premium Dry Fruits & Nuts</span>
           </h1>
           
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Discover our carefully curated selection of premium dry fruits, nuts, chocolates, and dates. 
-            Quality and freshness guaranteed.
+            With over 25 years of experience, we import the finest varieties of dates, Turkish figs, 
+            premium chocolates, and nuts from around the world. Quality and freshness guaranteed.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

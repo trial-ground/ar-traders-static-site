@@ -9,27 +9,27 @@ const ProductCategories = () => {
   const categories = [
     {
       title: "Premium Nuts",
-      description: "Cashews, almonds, pistachios, and more",
+      description: "Premium almonds, cashews, pistachios, and roasted peanuts",
       image: nutsImage,
-      features: ["Rich in protein", "Heart healthy", "Energy boosting"]
+      features: ["Premium Almonds", "Fresh Cashews", "Pistachios (Pista)", "Roasted Peanuts"]
     },
     {
       title: "Dry Fruits",
-      description: "Figs, apricots, raisins, and dried berries",
+      description: "Turkish figs and premium naturally dried fruits",
       image: dryFruitsImage,
-      features: ["Antioxidant rich", "Natural sweetness", "Fiber packed"]
+      features: ["Turkish Figs", "Premium Apricots", "Golden Raisins", "Dried Prunes"]
     },
     {
-      title: "Premium Chocolates",
-      description: "Dark chocolate and chocolate-covered nuts",
+      title: "Imported Chocolates",
+      description: "Premium imported chocolates from Europe and worldwide",
       image: chocolateImage,
-      features: ["Premium cocoa", "Artisan quality", "Gift ready"]
+      features: ["European Dark Chocolate", "Swiss Milk Chocolate", "Gourmet Truffles", "Artisanal Bars"]
     },
     {
-      title: "Fresh Dates",
-      description: "Medjool dates and specialty varieties",
+      title: "Premium Dates",
+      description: "Medjool, Ajwa, and specialty dates from Jordan, Saudi, Iran & Algeria",
       image: datesImage,
-      features: ["Natural energy", "Mineral rich", "Organic options"]
+      features: ["Medjool Jordan & Saudi", "Ajwa Premium", "Safawi & Amber", "Sukri & Iranian"]
     }
   ];
 

@@ -35,8 +35,8 @@ const About = () => {
               Why Choose Our Premium Selection?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              With over a decade of experience in the dry fruits and nuts industry, 
-              we have built lasting relationships with growers who share our commitment 
+              With over 25 years of experience in the dry fruits and nuts industry, 
+              AR Traders has built lasting relationships with growers worldwide who share our commitment 
               to quality and sustainability. Every product is carefully selected, 
               tested, and packed to deliver the finest experience to our customers.
             </p>
@@ -66,7 +66,7 @@ const About = () => {
           <div className="grid grid-cols-2 gap-6">
             <Card className="card-premium text-center p-6">
               <CardContent className="p-0">
-                <div className="text-3xl font-bold text-accent mb-2">10+</div>
+                <div className="text-3xl font-bold text-accent mb-2">25+</div>
                 <div className="text-sm text-muted-foreground">Years Experience</div>
               </CardContent>
             </Card>
