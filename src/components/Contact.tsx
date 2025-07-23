@@ -9,12 +9,12 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Our Store",
-      details: ["123 Premium Foods Street", "Gourmet District, City 12345"]
+      details: ["13/920,921 BIG BAZAR", "Kozhikode, Kerala 673001"]
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"]
+      details: ["099473 55955", ""]
     },
     {
       icon: Mail,
