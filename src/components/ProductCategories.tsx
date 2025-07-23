@@ -50,7 +50,7 @@ const ProductCategories = () => {
           {categories.map((category, index) => (
             <Card 
               key={category.title} 
-              className="card-premium hover-lift group overflow-hidden"
+              className="card-premium hover-lift group overflow-hidden flex flex-col h-full"
               style={{animationDelay: `${index * 200}ms`}}
             >
               <div className="relative overflow-hidden">
@@ -64,7 +64,7 @@ const ProductCategories = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex flex-col flex-grow">
                 <h3 className="font-display text-xl font-semibold text-primary mb-2">
                   {category.title}
                 </h3>
@@ -72,7 +72,7 @@ const ProductCategories = () => {
                   {category.description}
                 </p>
                 
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-2 mb-6 flex-grow">
                   {category.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm text-muted-foreground">
                       <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
@@ -81,7 +81,7 @@ const ProductCategories = () => {
                   ))}
                 </ul>
 
-                <Button variant="accent" className="w-full">
+                <Button variant="accent" className="w-full mt-auto">
                   View Products
                 </Button>
               </CardContent>
