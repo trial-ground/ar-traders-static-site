@@ -3,27 +3,29 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Contact = () => {
+  const { t } = useTranslation();
   const contactInfo = [
     {
       icon: MapPin,
-      title: "Visit Our Store",
+      title: t("contact.info.visit"),
       details: ["13/920,921 BIG BAZAR", "Kozhikode, Kerala 673001"]
     },
     {
       icon: Phone,
-      title: "Call Us",
+      title: t("contact.info.call"),
       details: ["099473 55955", ""]
     },
     {
       icon: Mail,
-      title: "Email Us",
+      title: t("contact.info.email"),
       details: ["info@artraders.com", "orders@artraders.com"]
     },
     {
       icon: Clock,
-      title: "Business Hours",
+      title: t("contact.info.hours"),
       details: ["Mon-Fri: 9:00 AM - 8:00 PM", "Sat-Sun: 10:00 AM - 6:00 PM"]
     }
   ];
@@ -33,11 +35,10 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-primary mb-4">
-            Get In Touch
+            {t("contact.title")}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have questions about our products or need custom orders? 
-            We'd love to hear from you!
+            {t("contact.description")}
           </p>
         </div>
 
@@ -73,20 +74,20 @@ const Contact = () => {
           <Card className="card-premium p-8">
             <CardContent className="p-0">
               <h3 className="font-display text-2xl font-semibold text-primary mb-6">
-                Send us a Message
+                {t("contact.form.title")}
               </h3>
               
               <form className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-primary mb-2">
-                      First Name
+                      {t("contact.form.firstName")}
                     </label>
                     <Input placeholder="John" className="border-border/50" />
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-primary mb-2">
-                      Last Name
+                      {t("contact.form.lastName")}
                     </label>
                     <Input placeholder="Doe" className="border-border/50" />
                   </div>
@@ -94,31 +95,31 @@ const Contact = () => {
 
                 <div>
                   <label className="block text-sm font-medium text-primary mb-2">
-                    Email
+                    {t("contact.form.email")}
                   </label>
                   <Input type="email" placeholder="john@example.com" className="border-border/50" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-primary mb-2">
-                    Phone Number
+                    {t("contact.form.phone")}
                   </label>
                   <Input type="tel" placeholder="+1 (555) 123-4567" className="border-border/50" />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-primary mb-2">
-                    Message
+                    {t("contact.form.message")}
                   </label>
                   <Textarea 
-                    placeholder="Tell us about your requirements..."
+                    placeholder={t("contact.form.messagePlaceholder")}
                     rows={4}
                     className="border-border/50 resize-none"
                   />
                 </div>
 
                 <Button variant="hero" className="w-full py-3">
-                  Send Message
+                  {t("contact.form.send")}
                 </Button>
               </form>
             </CardContent>

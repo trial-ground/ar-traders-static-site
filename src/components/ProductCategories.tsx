@@ -1,35 +1,37 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 import nutsImage from "@/assets/nuts-category.jpg";
 import dryFruitsImage from "@/assets/dry-fruits-category.jpg";
 import chocolateImage from "@/assets/chocolate-category.jpg";
 import datesImage from "@/assets/dates-category.jpg";
 
 const ProductCategories = () => {
+  const { t } = useTranslation();
   const categories = [
     {
-      title: "Premium Nuts",
-      description: "Premium almonds, cashews, pistachios, and roasted peanuts",
+      title: t("products.nuts.title"),
+      description: t("products.nuts.description"),
       image: nutsImage,
-      features: ["Premium Almonds", "Fresh Cashews", "Pistachios (Pista)", "Roasted Peanuts"]
+      features: t("products.nuts.features", { returnObjects: true }) as string[]
     },
     {
-      title: "Dry Fruits",
-      description: "Turkish figs and premium naturally dried fruits",
+      title: t("products.dryFruits.title"),
+      description: t("products.dryFruits.description"),
       image: dryFruitsImage,
-      features: ["Turkish Figs", "Premium Apricots", "Golden Raisins", "Dried Prunes"]
+      features: t("products.dryFruits.features", { returnObjects: true }) as string[]
     },
     {
-      title: "Imported Chocolates",
-      description: "Premium imported chocolates from Europe and worldwide",
+      title: t("products.chocolates.title"),
+      description: t("products.chocolates.description"),
       image: chocolateImage,
-      features: ["European Dark Chocolate", "Swiss Milk Chocolate", "Gourmet Truffles", "Artisanal Bars"]
+      features: t("products.chocolates.features", { returnObjects: true }) as string[]
     },
     {
-      title: "Premium Dates",
-      description: "Medjool, Ajwa, and specialty dates from Jordan, Saudi, Iran & Algeria",
+      title: t("products.dates.title"),
+      description: t("products.dates.description"),
       image: datesImage,
-      features: ["Medjool Jordan & Saudi", "Ajwa Premium", "Safawi & Amber", "Sukri & Iranian"]
+      features: t("products.dates.features", { returnObjects: true }) as string[]
     }
   ];
 
@@ -38,11 +40,10 @@ const ProductCategories = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-primary mb-4">
-            Our Product Categories
+            {t("products.title")}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Each category features carefully selected, premium quality products 
-            sourced from the finest growers worldwide.
+            {t("products.description")}
           </p>
         </div>
 
@@ -82,7 +83,7 @@ const ProductCategories = () => {
                 </ul>
 
                 <Button variant="accent" className="w-full mt-auto">
-                  View Products
+                  {t("products.viewProducts")}
                 </Button>
               </CardContent>
             </Card>

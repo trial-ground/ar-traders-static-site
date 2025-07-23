@@ -1,27 +1,29 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Heart, Leaf, Award, Clock } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const About = () => {
+  const { t } = useTranslation();
   const features = [
     {
       icon: Heart,
-      title: "Quality First",
-      description: "We source only the finest quality dry fruits and nuts from trusted growers worldwide."
+      title: t("about.features.quality.title"),
+      description: t("about.features.quality.description")
     },
     {
       icon: Leaf,
-      title: "Natural & Fresh",
-      description: "All our products are natural, preservative-free, and packed fresh to maintain optimal taste."
+      title: t("about.features.fresh.title"),
+      description: t("about.features.fresh.description")
     },
     {
       icon: Award,
-      title: "Premium Selection",
-      description: "Carefully curated selection of premium varieties to ensure exceptional quality in every bite."
+      title: t("about.features.premium.title"),
+      description: t("about.features.premium.description")
     },
     {
       icon: Clock,
-      title: "Fast Delivery",
-      description: "Quick and reliable delivery to ensure you receive your order fresh and on time."
+      title: t("about.features.delivery.title"),
+      description: t("about.features.delivery.description")
     }
   ];
 
@@ -31,13 +33,10 @@ const About = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-primary mb-6">
-            Why Choose Our Premium Selection?
+            {t("about.title")}
           </h2>
           <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-4xl mx-auto">
-            With over 25 years of experience in the dry fruits and nuts industry, 
-            AR Traders has built lasting relationships with growers worldwide who share our commitment 
-            to quality and sustainability. Every product is carefully selected, 
-            tested, and packed to deliver the finest experience to our customers.
+            {t("about.description")}
           </p>
         </div>
 
@@ -65,25 +64,25 @@ const About = () => {
           <Card className="card-premium text-center p-6">
             <CardContent className="p-0">
               <div className="text-3xl font-bold text-accent mb-2">25+</div>
-              <div className="text-sm text-muted-foreground">Years Experience</div>
+              <div className="text-sm text-muted-foreground">{t("about.stats.experience")}</div>
             </CardContent>
           </Card>
           <Card className="card-premium text-center p-6">
             <CardContent className="p-0">
               <div className="text-3xl font-bold text-accent mb-2">500+</div>
-              <div className="text-sm text-muted-foreground">Happy Customers</div>
+              <div className="text-sm text-muted-foreground">{t("about.stats.customers")}</div>
             </CardContent>
           </Card>
           <Card className="card-premium text-center p-6">
             <CardContent className="p-0">
               <div className="text-3xl font-bold text-accent mb-2">50+</div>
-              <div className="text-sm text-muted-foreground">Product Varieties</div>
+              <div className="text-sm text-muted-foreground">{t("about.stats.varieties")}</div>
             </CardContent>
           </Card>
           <Card className="card-premium text-center p-6">
             <CardContent className="p-0">
               <div className="text-3xl font-bold text-accent mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">Quality Guarantee</div>
+              <div className="text-sm text-muted-foreground">{t("about.stats.guarantee")}</div>
             </CardContent>
           </Card>
         </div>
