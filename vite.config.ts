@@ -9,7 +9,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: '/ar-traders-static-site/',
+  base: './',
   plugins: [
     react(),
     mode === 'development' &&
